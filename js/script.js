@@ -29,8 +29,28 @@ createApp({
                     desc: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, perspiciatis parole in latino',
                     link: 'img/sweden.jpg'
                 }
-            ]
+            ],
+            counterImage: 0,
+            classActive: '',
+            isActive: false
+        }
+    },
+    methods: {
+        nextItem(){ 
+            if(this.counterImage < this.items.length -1){
+                this.counterImage++;
+            }
+        },
+        prevItem(){
+            if(this.counterImage > 0){
+                this.counterImage--;
+            }
+
+        },
+        changeImage(index){
+            this.counterImage = index;
         }
     }
+
 }).mount('#app');
 

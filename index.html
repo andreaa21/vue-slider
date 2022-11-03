@@ -20,26 +20,29 @@
 
                 <div class="images">
                      <div
-                     v-for="item in items"
                      class="item">
-                    <img :src="item.link" alt=""> 
-                    <div class="title">{{item.title}}</div>
-                    <div class="desc">{{item.desc}}</div>
+                    <img :src="items[counterImage].link" alt=""> 
+                    <div class="title">{{items[counterImage].title}}</div>
+                    <div class="desc">{{items[counterImage].desc}}</div>
                     </div> 
                 </div>
 
                 <div class="thumbs">
-                    <div class="btn left" id="left">
+                    <div class="btn left" id="left" @click="prevItem">
                         <i class="fa-solid fa-chevron-left"></i>
                     </div>
-                    <div class="btn right" id="right">
+                    <div class="btn right" id="right" @click="nextItem">
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
-                    
+
                     <div class="inner debug">
                     <img 
-                    v-for="item in items"
-                    :src="item.link" alt="" class="thumb-item">
+                    v-for="(item, index) in items"
+                    :src="item.link" 
+                    alt="" 
+                    class="thumb-item" 
+                    :class="{'active': index === counterImage}"
+                    @click="changeImage(index)">
                     </div>
                 
                 </div>
