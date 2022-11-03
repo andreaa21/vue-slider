@@ -35,6 +35,7 @@ body{
 }
 .images .item{
     object-fit: cover;
+    display: none;
 }
 .images .item.active{
     display: block;
