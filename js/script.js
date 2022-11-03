@@ -31,21 +31,18 @@ createApp({
                 }
             ],
             counterImage: 0,
-            classActive: '',
-            isActive: false
         }
     },
     methods: {
-        nextItem(){ 
-            if(this.counterImage < this.items.length -1){
-                this.counterImage++;
+        nextPrev(isNext){ 
+            if(isNext) this.counterImage++;
+            else this.counterImage--;
+            if(this.counterImage === this.items.length){
+                this.counterImage = 0;
             }
-        },
-        prevItem(){
-            if(this.counterImage > 0){
-                this.counterImage--;
+            if(this.counterImage < 0){
+                this.counterImage = this.items.length -1;
             }
-
         },
         changeImage(index){
             this.counterImage = index;
