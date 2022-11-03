@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css' integrity='sha512-HHsOC+h3najWR7OKiGZtfhFIEzg5VRIPde0kB0bG2QRidTQqf+sbfcxCTB16AcFB93xMjnBIKE29/MjdzXE+qw==' crossorigin='anonymous'/>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>carousel-js</title>
+</head>
+<body>
+    
+    <div class="main-wrapper">
+        <div class="container">
+            <div class="images">
+                 <div class="item">
+                <img src="img/argentina.jpg" alt=""> 
+                </div> 
+            </div>
+            <div class="thumbs">
+                <div class="btn left" id="left">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="btn right" id="right">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div class="inner debug">
+                <img src="img/argentina.jpg" alt="" class="thumb-item thumb-active">
+                <img src="img/chile.jpg" alt="" class="thumb-item">
+                <img src="img/colombia.jpg" alt="" class="thumb-item">
+                <img src="img/peru.jpg" alt="" class="thumb-item">
+                <img src="img/sweden.jpg" alt="" class="thumb-item">
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+   
+
+    <script src="js/script.js"></script>
+</body>
+</html>

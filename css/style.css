@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.debug{
+    background-color: rgba(255, 0, 0, .25);
+}
+
+body{
+    background-color: cornflowerblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.main-wrapper{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width:  900px;
+    height: 500px;
+    background-color: aqua;
+}
+.images{
+    height: 75%; 
+    background-color: brown;
+    color: white;
+    position: relative;
+}
+.images .item{
+    object-fit: cover;
+}
+.images .item.active{
+    display: block;
+}
+
+.images img {
+    width: 100%;
+}
+.images .title, .images .desc{
+    /* padding: 10px; */
+    position: absolute;
+}
+.images .title{
+    right: 10px;
+    top: 0;
+}
+.images .desc{
+    right: 10px;
+    top: 60px;
+}
+
+
+.thumbs{
+    position: relative;
+    /* height:35%; */
+    /* background-color: black;  */
+}
+.thumbs .inner{
+    display: flex;
+}
+.thumb-item{
+    width: 20%;
+    filter: brightness(.6);
+    z-index: 0;
+}
+.thumb-active{
+    border: 2px solid white;
+    filter: brightness(1);
+}
+
+
+
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    opacity: 50%;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 999;
+}
+.btn:hover{
+    opacity: 1;
+}
+.left{
+    position: absolute;
+    left: 15px;
+    top: 43%;
+}
+.right{
+    position: absolute;
+    right: 15px;
+    top: 43%;
+}
