@@ -16,12 +16,15 @@
     <div id="app">
         <div class="main-wrapper">
 
-            <div class="container">
+            <div
+            @mouseenter="stopAutoscroll"
+            @mouseleave="startAutoscroll"
+            class="container">
 
                 <div class="images">
                      <div
                      class="item">
-                    <img :src="items[counterImage].link" alt=""> 
+                    <img :src="items[counterImage].link" :alt="items[counterImage].title"> 
                     <div class="title">{{items[counterImage].title}}</div>
                     <div class="desc">{{items[counterImage].desc}}</div>
                     </div> 

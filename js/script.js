@@ -46,7 +46,18 @@ createApp({
         },
         changeImage(index){
             this.counterImage = index;
+        },
+        startAutoscroll(){
+            this.autoscroll = setInterval(() =>{
+                    this.nextPrev(true);
+            },2000)
+        },
+        stopAutoscroll(){
+            clearInterval(this.autoscroll);
         }
+    },
+    mounted(){
+        this.startAutoscroll();
     }
 
 }).mount('#app');
